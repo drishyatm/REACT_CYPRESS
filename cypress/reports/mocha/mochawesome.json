@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-06T12:01:24.227Z",
+    "end": "2023-12-06T12:01:27.689Z",
+    "duration": 3462,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e3ba159-cf67-47cf-b056-569379020904",
+      "title": "",
+      "fullFile": "cypress/e2e/test_base_page.cy.js",
+      "file": "cypress/e2e/test_base_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74279280-98b5-4f0e-a10a-29fa1a233b95",
+          "title": "Shoping in Evershop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "80d26f89-6961-49b0-8676-3e7089419ee9",
+              "title": "Initial page Load",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Validate the title of the page",
+                  "fullTitle": "Shoping in Evershop Initial page Load Validate the title of the page",
+                  "timedOut": null,
+                  "duration": 3397,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//validate the title of the app and the menu\ncy.title().should('eq', 'Charka Nurture');\ncy.get(_selectors.default.nav_menu).should('be.visible');\ncy.get(_selectors.default.nav_menu).contains(men.male).should('be.visible');\ncy.get(_selectors.default.nav_menu).contains(women.female).should('be.visible');",
+                  "err": {},
+                  "uuid": "4ff1fbed-b564-467d-adf3-3b2ccdff6a6e",
+                  "parentUUID": "80d26f89-6961-49b0-8676-3e7089419ee9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4ff1fbed-b564-467d-adf3-3b2ccdff6a6e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3397,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

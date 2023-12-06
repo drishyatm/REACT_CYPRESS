@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-12-06T12:01:29.284Z",
+    "end": "2023-12-06T12:01:35.385Z",
+    "duration": 6101,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c613ab67-0fc6-49e3-a624-bc38756db0a9",
+      "title": "",
+      "fullFile": "cypress/e2e/test_product_page.cy.js",
+      "file": "cypress/e2e/test_product_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "db503d28-adc5-4ac7-80ee-267bb266b3f9",
+          "title": "Shopping E2E Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the shopping page for women",
+              "fullTitle": "Shopping E2E Testing Validate the shopping page for women",
+              "timedOut": null,
+              "duration": 2282,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _shoppingUtil.validateShoppingPage)(women.female, women.url_women);\nconst {\n  cheapestPrice,\n  cheapestProduct\n} = (0, _shoppingUtil.findCheapestProduct)();\ncy.log(`Adding product to cart with price in product page: ${cheapestPrice}, product type: ${cheapestProduct}`);\n(0, _shoppingUtil.addToCart)(cheapestPrice, cheapestProduct);",
+              "err": {
+                "message": "TypeError: Cannot destructure property 'cheapestPrice' of '(0 , _shoppingUtil.findCheapestProduct)(...)' as it is undefined.",
+                "estack": "TypeError: Cannot destructure property 'cheapestPrice' of '(0 , _shoppingUtil.findCheapestProduct)(...)' as it is undefined.\n    at Context.eval (webpack:///./cypress/e2e/test_product_page.cy.js:15:16)",
+                "diff": null
+              },
+              "uuid": "c7107731-19db-4f72-a869-2aaba79f9f67",
+              "parentUUID": "db503d28-adc5-4ac7-80ee-267bb266b3f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the shopping page for men",
+              "fullTitle": "Shopping E2E Testing Validate the shopping page for men",
+              "timedOut": null,
+              "duration": 3729,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _shoppingUtil.validateShoppingPage)(men.male, men.url_men);\n(0, _shoppingUtil.findCheapestProduct)();",
+              "err": {
+                "message": "CypressError: `cy.then()` failed because you are mixing up async and sync code.\n\nIn your callback function you invoked 1 or more cy commands but then returned a synchronous value.\n\nCypress commands are asynchronous and it doesn't make sense to queue cy commands and yet return a synchronous value.\n\nYou likely forgot to properly chain the cy commands using another `cy.then()`.\n\nThe value you synchronously returned was: `{cheapestprice: 185.9, cheapestproduct: Sale Price}`",
+                "estack": "CypressError: `cy.then()` failed because you are mixing up async and sync code.\n\nIn your callback function you invoked 1 or more cy commands but then returned a synchronous value.\n\nCypress commands are asynchronous and it doesn't make sense to queue cy commands and yet return a synchronous value.\n\nYou likely forgot to properly chain the cy commands using another `cy.then()`.\n\nThe value you synchronously returned was: `{cheapestprice: 185.9, cheapestproduct: Sale Price}`\n    at getRet (https://demo.evershop.io/__cypress/runner/cypress_runner.js:118310:70)\n    at tryCatcher (https://demo.evershop.io/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://demo.evershop.io/__cypress/runner/cypress_runner.js:4315:29)\n    at Context.thenFn (https://demo.evershop.io/__cypress/runner/cypress_runner.js:118319:66)\n    at Context.then (https://demo.evershop.io/__cypress/runner/cypress_runner.js:118568:21)\n    at wrapped (https://demo.evershop.io/__cypress/runner/cypress_runner.js:138719:19)\nFrom Your Spec Code:\n    at findCheapestProduct (webpack:///./cypress/support/shoppingUtil.js:33:11)\n    at Context.eval (webpack:///./cypress/e2e/test_product_page.cy.js:22:28)",
+                "diff": null
+              },
+              "uuid": "505ce9d3-77d1-4f13-8bc0-dd9d814a3487",
+              "parentUUID": "db503d28-adc5-4ac7-80ee-267bb266b3f9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c7107731-19db-4f72-a869-2aaba79f9f67",
+            "505ce9d3-77d1-4f13-8bc0-dd9d814a3487"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6011,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
