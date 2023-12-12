@@ -11,14 +11,22 @@ beforeEach(function () {
 })
 context('Shopping E2E Testing', function () {
     it('Validate the shopping page for women', function () {
-        validateShoppingPage(women.female, women.url_women);
-        const { cheapestPrice, cheapestProduct } = findCheapestProduct();
-        cy.log(`Adding product to cart with price in product page: ${cheapestPrice}, product type: ${cheapestProduct}`);
-        addToCart(cheapestPrice, cheapestProduct);
+        validateShoppingPage(women.female, women.url_women);        
+        findCheapestProduct().then((result) => {            
+            const { cheapestPrice, cheapestProduct } = result;
+            cy.log(`Adding product to cart with price in product page: ${cheapestPrice}, product type: ${cheapestProduct}`);
+            addToCart(cheapestPrice, cheapestProduct);
+        });
+        
+        
     });
 
     it('Validate the shopping page for men', function () {
         validateShoppingPage(men.male, men.url_men);
-        findCheapestProduct();
+        findCheapestProduct().then((result) => {
+            const { cheapestPrice, cheapestProduct } = result;
+            cy.log(`Adding product to cart with price in product page: ${cheapestPrice}, product type: ${cheapestProduct}`);
+            addToCart(cheapestPrice, cheapestProduct);
+        });
     });
 });

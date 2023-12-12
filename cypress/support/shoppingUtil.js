@@ -16,7 +16,7 @@ export function findCheapestProduct() {
     const prices = [];
     let minPrice;
 
-    cy.get(selectors.product_list)
+     return cy.get(selectors.product_list)
         .each(($product) => {
             const salePrice = parseFloat($product.find(selectors.sale_price).text().replace('$', ''));
             const regularPrice = parseFloat($product.find(selectors.regular_price).text().replace('$', ''));
@@ -30,18 +30,19 @@ export function findCheapestProduct() {
                 cheapestPrice = regularPrice;
                 cheapestProduct = 'Regular Price';
             }
-        }).then(() => {
+        })
+         .then(() => {
             minPrice = Math.min(...prices);
             if (cheapestPrice === minPrice) {
                 cy.wrap(cheapestPrice).should('equal', minPrice);
                 cy.wrap(cheapestProduct).should('be.oneOf', ['Sale Price', 'Regular Price']);
             } else {
                 cy.log(`Minimum price does not match the Calculated Cheapest price!.Min Price is ${minPrice}`);
-            }
-            cy.log(`Adding product to cart with price in method of find minimum: ${cheapestPrice}, product type: ${cheapestProduct}`);
-            return { cheapestPrice, cheapestProduct };
-           
-        });
+            }  
+         })
+         .then(() => {
+             return { cheapestPrice, cheapestProduct };
+         });
     
 }
 

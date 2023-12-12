@@ -1,5 +1,5 @@
 # REACT_CYPRESS
-Cypress is a powerful end-to-end testing framework that aims to simplify testing by making it easier to set up, write, and debug tests. This document will guide you through the process of setting up Cypress and using it for testing a web application.
+Cypress is a powerful end-to-end testing framework that aims to simplify testing by making it easier to set up, write, and debug tests. This document will guide you through the process of setting up Cypress and using it for testing a web application called evershop
 
 # Prerequisites
 - Node.js installed on your machine (https://nodejs.org/en/)
