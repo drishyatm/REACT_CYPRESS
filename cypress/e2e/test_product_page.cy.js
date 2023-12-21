@@ -16,8 +16,7 @@ context('Shopping E2E Testing', function () {
             const { cheapestPrice, cheapestProduct } = result;
             cy.log(`Adding product to cart with price in product page: ${cheapestPrice}, product type: ${cheapestProduct}`);
             addToCart(cheapestPrice, cheapestProduct);
-        });
-        
+        });   
         
     });
 

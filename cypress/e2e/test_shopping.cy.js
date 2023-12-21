@@ -16,8 +16,8 @@ describe('Shoping in Evershop', () => {
     
   })
 
- context('Shopping E2E Testing', function () {
-    it('Validate the shoping page', function () {         
+ context('Added Minimum price to cart', function () {
+    it('Validate the shopping for least price product', function () {         
       validateShoppingPage(women.female, women.url_women)
       let cheapestPrice = Infinity;
       let cheapestProduct = '';
