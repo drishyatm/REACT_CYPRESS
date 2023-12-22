@@ -67,20 +67,23 @@ npm i --save-dev cypress-mochawesome-reporter
    g) Reports will be visible on the UI as well as the terminal
    ![Selection_288](https://github.com/drishyatm/REACT_CYPRESS/assets/66368262/58f39f87-b7fe-492b-ac28-0fb511da7644)
 
-10. Integrate with Browser stack 
+9. Integrate with Browser stack 
 
    a) Run the browserstack cli
+   
       ```python
       npm i -g browserstack-cypress-cli
       ```
       
    b) Run the following command to initialize the project folder and create a boilerplate browserstack.json file
-      Skip this step, if you have the browserstack configuration already ready . 
+      Skip this step, if you have the browserstack configuration already ready .
+   
       ```python
       browserstack-cypress init
       ```
       
    c) Run the browserstack command
+   
       ```python
       browserstack-cypress run --u<username> -k <browserstack key>
      ```
