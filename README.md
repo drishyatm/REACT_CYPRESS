@@ -45,28 +45,25 @@ Note: Configure the folder structure /report folders in the cypress.config.js
 Click on the report link to see the report.html
 
 8. Integrate with cypress cloud
-   a) First we should configure/login 
-
-    ```python
+   a) First we should configure/login
+   ```python
       npx cypress open
    ```
-  b)  Go to the Settings in the right hand menu
-  c)  Connect to "Cypress Cloud settings"
-  d)  Create account/login with google account 
-  e)  Export the credentials in the terminals 
-      ```python
-      export CYPRESS_RECORD_KEY =< key provided in UI >      
-      ```
-  f) Run the test 
-      ```python
-      npm run test --record
-      ```
-  g) Reports will be visible on the UI as well as the terminal 
-            
-
+   b)  Go to the Settings in the right hand menu
+   c)  Connect to "Cypress Cloud settings"
+   d)  Create account/login with google account
+   e)  Export the credentials in the terminals 
+       ```python
+       export CYPRESS_RECORD_KEY =< key provided in UI >      
+       ```
+   f)  Run the test 
+       ```python
+       npm run test --record
+       ```
+   g) Reports will be visible on the UI as well as the terminal
    ![Selection_288](https://github.com/drishyatm/REACT_CYPRESS/assets/66368262/58f39f87-b7fe-492b-ac28-0fb511da7644)
 
-9. Integrate with Browser stack 
+10. Integrate with Browser stack 
 
    a) Run the browserstack cli
       ```python
