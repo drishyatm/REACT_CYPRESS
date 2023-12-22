@@ -56,18 +56,21 @@ npm i --save-dev cypress-mochawesome-reporter
    
    d)  Create account/login with google account
    
-   e)  Export the credentials in the terminals 
+   e)  Export the credentials in the terminals
+   
        ```python
        export CYPRESS_RECORD_KEY =< key provided in UI >      
        ```
-   f)  Run the test 
+   f)  Run the test
+   
        ```python
        npm run test --record
        ```
    g) Reports will be visible on the UI as well as the terminal
+   
    ![Selection_288](https://github.com/drishyatm/REACT_CYPRESS/assets/66368262/58f39f87-b7fe-492b-ac28-0fb511da7644)
 
-9. Integrate with Browser stack 
+10. Integrate with Browser stack 
 
    a) Run the browserstack cli
    
