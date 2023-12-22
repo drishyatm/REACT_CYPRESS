@@ -27,7 +27,7 @@ npm install cypress --save-dev
 npx cypress open
 ```
 
-This will open the Cypress Test Runner in your browser.
+   This will open the Cypress Test Runner in your browser.
 
 5. Select the browser that is installed in your machine to see how the UI test works (Select the E2E( configured tests)).
 
@@ -36,13 +36,13 @@ This will open the Cypress Test Runner in your browser.
 ```python
 npm i --save-dev cypress-mochawesome-reporter
 ```
-Note: Configure the folder structure /report folders in the cypress.config.js
+   Note: Configure the folder structure /report folders in the cypress.config.js
 
 7. Run the test
 ```python
    npm run test
 ```
-Click on the report link to see the report.html
+   Click on the report link to see the report.html
 
 8. Integrate with cypress cloud
    
@@ -51,8 +51,11 @@ Click on the report link to see the report.html
       npx cypress open
    ```
    b)  Go to the Settings in the right hand menu
+   
    c)  Connect to "Cypress Cloud settings"
+   
    d)  Create account/login with google account
+   
    e)  Export the credentials in the terminals 
        ```python
        export CYPRESS_RECORD_KEY =< key provided in UI >      
@@ -64,21 +67,24 @@ Click on the report link to see the report.html
    g) Reports will be visible on the UI as well as the terminal
    ![Selection_288](https://github.com/drishyatm/REACT_CYPRESS/assets/66368262/58f39f87-b7fe-492b-ac28-0fb511da7644)
 
-9. Integrate with Browser stack 
+10. Integrate with Browser stack 
 
    a) Run the browserstack cli
       ```python
       npm i -g browserstack-cypress-cli
       ```
+      
    b) Run the following command to initialize the project folder and create a boilerplate browserstack.json file
       Skip this step, if you have the browserstack configuration already ready . 
       ```python
       browserstack-cypress init
       ```
+      
    c) Run the browserstack command
       ```python
       browserstack-cypress run --u<username> -k <browserstack key>
      ```
+     
    d) Reports can be viewed by clicking on the one that appears at the conclusion of the test terminal output OR        by using BrowserStack. The dashboard will include a comprehensive report with information on the                  platforms and browsers used for the test runs. 
 
    
